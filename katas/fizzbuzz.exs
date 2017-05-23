@@ -1,7 +1,8 @@
 
 defmodule FizzBuzz do
   def go(min, max) do
-    Enum.each(min..max, fn(x) -> go(x) end)
+    # Enum.each(min..max, fn(x) -> go(x) end)
+    Enum.each(min..max, &go/1)
   end
 
   def go(num) when (rem(num, 15) == 0), do: IO.puts "fizzbuzz"

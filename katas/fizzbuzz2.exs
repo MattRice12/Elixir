@@ -1,6 +1,7 @@
 defmodule FizzBuzz do
   def run(min, max) do
-    Enum.each(min..max, fn(num) -> run(num) end)
+    # Enum.each(min..max, fn(num) -> run(num) end)
+    Enum.each(min..max, &run/1)
   end
 
   def run(num) when (rem(num, 15) == 0), do: IO.puts "fizzbuzz"
