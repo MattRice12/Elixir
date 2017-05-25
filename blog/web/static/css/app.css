@@ -1,0 +1,16 @@
+/* This file is for your main application css. */
+
+.post-ul {
+  margin: 0;
+  padding: 0;
+}
+
+.post-li {
+  list-style-type: none;
+  border-bottom: 1px dotted gray;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+}

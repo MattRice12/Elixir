@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<ul class="post-ul">
+  <%= for post <- @posts do %>
+    <li class="post-li">
+      <div class="post-head">
+        <h2><%= post.title %></h2>
+        <%= link("Delete", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-sm del-post") %>
+      </div>
+
+      <p><%= post.body %></p>
+    </li>
+  <% end %>
+  <%= link("Create New Post", to: post_path(@conn, :new), class: "new-post") %>
+</ul>
