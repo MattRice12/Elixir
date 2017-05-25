@@ -3,7 +3,7 @@
   <%= for post <- @posts do %>
     <li class="post-li">
       <div class="post-head">
-        <h2><%= post.title %></h2>
+        <h2><%= link(post.title, to: post_path(@conn, :show, post)) %></h2>
         <%= link("Delete", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-sm del-post") %>
       </div>
 

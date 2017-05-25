@@ -1,0 +1,6 @@
+<div>
+  <h1><%= @post.title %></h1>
+  <%= link("Edit", to: post_path(@conn, :edit, @post), method: :get, class: "btn btn-primary btn-sm del-post") %>
+</div>
+
+<p><%= @post.body %></p>

@@ -15,9 +15,7 @@
     <div class="container">
       <header class="header">
         <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="/posts">Matt's Blog</a></li>
-          </ul>
+            <h1><a href="/">Matt's Blog</a></h1>
         </nav>
         <!-- <span class="logo"></span> -->
       </header>
