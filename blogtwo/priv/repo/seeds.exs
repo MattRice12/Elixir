@@ -5,17 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Blog.Repo.insert!(%Blog.SomeModel{})
+#     Blogtwo.Repo.insert!(%Blogtwo.SomeModel{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-
-
-alias Blog.Repo
-alias Blog.Post
-
-(1..100)
-|> Enum.each(fn _ -> (Repo.insert %Post{
-    title: "First Post",
-    body: "Hi this is the body of the first post"
-  }) end)

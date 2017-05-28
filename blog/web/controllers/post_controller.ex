@@ -37,8 +37,6 @@ defmodule Blog.PostController do
     render(conn, :edit, post: post, changeset: changeset)
   end
 
-
-
   def update(conn, %{"id" => id, "post" => post_params}) do
     post = Repo.get!(Post, id)
     changeset = Post.changeset(post, post_params)
@@ -52,11 +50,6 @@ defmodule Blog.PostController do
         render(conn, :edit, post: post, changeset: changeset)
     end
   end
-
-
-
-
-
 
   def delete(conn, %{"id" => id}) do
     post = Repo.get!(Post, id) |> Repo.delete!
