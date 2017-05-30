@@ -16,12 +16,16 @@
 
 ## Create Models
   Generate Model:
-    Post: `mix phoenix.gen.model Post posts title:string body:string`
+    Post: `mix phoenix.gen.model Post posts title:string body:text`
 
     User: `mix phoenix.gen.model User users email:string password_hash:string`
 
   Migrate:
     `mix ecto.migrate`
+
+## Bootstrap alternative
+  `mix phoenix.gen.html Post posts title:string body:text`
+    - This builds models, views, and controller
 
 ## iEX console
   `iex -S mix`
