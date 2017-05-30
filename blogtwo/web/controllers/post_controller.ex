@@ -17,7 +17,7 @@ defmodule Blogtwo.PostController do
   end
 
   def create(conn, %{"post" => post_params}) do
-    changeset = Post.changeset(%Post{}, post_params)
+    changeset = Post.changeset(%Post{}, Map.put(post_params, "user_id", 1))
 
     case Repo.insert(changeset) do
       {:ok, _post} ->

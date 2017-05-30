@@ -6,8 +6,11 @@ defmodule Blogtwo.User do
     field :password, :string, virtual: true
     field :password_hash, :string
 
+    has_many :posts, Blogtwo.Post
+
     timestamps()
   end
+
 
   @doc """
   Builds a changeset based on the `struct` and `params`.

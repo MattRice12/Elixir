@@ -20,7 +20,7 @@ defmodule Blogtwo.UserController do
   def create(conn, %{"user" => user_params}) do
     changeset = User.changeset(%User{}, user_params)
     case Repo.insert(changeset) do
-      {:ok, user} ->
+      {:ok, _user} ->
         conn
         |> put_flash(:info, "User Created!")
         |> redirect(to: user_path(conn, :index))
